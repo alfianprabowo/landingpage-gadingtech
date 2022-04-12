@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+  .home{
+    @apply bg-gradient-to-tr from-[#1E1E1E] to-[#414141] rounded-xl shadow-[inset_0_0px_3px_2px_rgba(80,80,80,0.5)] grid place-items-center
+  }
+ 
+}
+
+.clip{
+  clip: rect(auto, auto, auto, auto);
+}

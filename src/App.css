@@ -1,0 +1,280 @@
+.opening:before{
+  content: '';
+  
+  animation-name: head;
+  animation-duration: 4s;
+}
+.fade-in{
+  animation: fadeIn 1s forwards linear;
+}
+.fade-out{
+  animation: fadeOut 1s forwards linear;
+}
+.menu{
+  animation: menu 2s linear;
+}
+.gading {
+  animation: gading 2s both ease-in;
+}
+.open {
+  animation: openAnimation 1s  ease-in;
+}
+/* .open-menu{
+  animation: openMenuAnimation 1s both ease-in;
+  -webkit-animation: openMenuAnimation 1s both ease-in;
+}
+.close-menu{
+  animation: closeMenuAnimation 1s both ease-in;
+} */
+/* .open-card-1{
+  animation: openCard1 1s  ease-out;
+}
+.open-card-2{
+  animation: openCard2 1s both ease-out;
+}
+.open-card-3{
+  animation: openCard3 1s both ease-out;
+}
+.open-card-4{
+  animation: openCard4 1s both ease-out;
+}
+.open-card-5{
+  animation: openCard5 1s both ease-out;
+} */
+.flip{
+  animation: flip 1s both ease-in-out;
+}
+.flip-back{
+  animation: flipBack 1s both ease-in-out;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes gading {
+  0% {scale:100%; opacity:0; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);}
+  75% {scale:200%; opacity:1;  position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);}
+  100% {scale:100%; opacity:1;}
+}
+/* @keyframes openCard1{
+  0% {transform: translateY(50%); }
+  70%{transform: translateY(50%); }
+  80%{transform: translateY(0%); }
+  90%{transform: translateY(-7%); }
+  100%{transform: translateY(0%); }
+}
+@keyframes openCard2{
+  0% {transform: translateY(70%); }
+  70%{transform: translateY(70%); }
+  80%{transform: translateY(0%); }
+  90%{transform: translateY(-7%); }
+  100%{transform: translateY(0%); }
+}
+@keyframes openCard3{
+  0% {transform: translateY(90%); }
+  70%{transform: translateY(90%); }
+  80%{transform: translateY(0%); }
+  90%{transform: translateY(-7%); }
+  100%{transform: translateY(0%); }
+}
+@keyframes openCard4{
+  0% {transform: translateY(10%); }
+  70%{transform: translateY(10%); }
+  80%{transform: translateY(0%); }
+  90%{transform: translateY(-7%); }
+  100%{transform: translateY(0%); }
+}
+@keyframes openCard5{
+  0% {transform: translateY(20%); }
+  70%{transform: translateY(20%); }
+  80%{transform: translateY(0%); }
+  90%{transform: translateY(-7%); }
+  100%{transform: translateY(0%); }
+} */
+@keyframes head {
+  0% {font-size:95%; opacity:0; }
+  25% {font-size:100%; opacity:1; content: "Beyond The Future With Us";}
+  50% {font-size:95%; opacity:0; }
+  75% {font-size:100%;opacity:1; }
+  100% {font-size:95%; opacity:0; content: "Gading Tech."}
+}
+@keyframes openAnimation {
+  0% {
+    left: 150%;
+  }
+
+  100% {
+    left: 50%;
+    top: 50%;
+  }
+}
+/* @keyframes openMenuAnimation {
+  0% {
+    left: 50%;
+    top: 50%;
+  }
+
+  100% {
+    left: 75%;
+    top: 2%;      
+    scale: 0.5;
+  }
+}
+@keyframes closeMenuAnimation {
+  0% {
+    transform: translate(calc(50vw), calc(-90vh));
+    scale: 0.5;
+  }
+
+  100% {
+    transform:translate(0%,0%);
+  }
+} */
+
+@keyframes flip {
+  0% {
+    transform: translate(0%,0%)  rotateY(0deg);
+
+  }
+
+  100% {
+    transform: translate(calc(50vh), calc(10vw)) rotateY(180deg) scaleX(3);
+    
+
+    z-index: 2;
+  }
+}
+
+@keyframes flipBack {
+  0% {
+    transform: translate(calc(50vh), calc(10vw)) rotateY(180deg);
+
+    z-index: 2;
+  }
+
+  100% {
+    transform: translate(0%,0%)  rotateY(0deg);
+  }
+}
+
+.preserve-3d{
+  transform-style: preserve-3d;
+}
+.backface-hidden{
+  backface-visibility: hidden;
+}
+.rotate-x-180{
+  transform: rotateX(180deg);
+}
+.rotate-y-180{
+  transform: rotateY(180deg);
+}
+/* .thecard:hover{
+  transform: rotateY(180deg);
+} */
+
+.flip-card {
+  position: relative;
+  display: block;
+  left: 0;
+  background-color: transparent;
+  width: 250px;
+  height: 400px;
+  perspective: 1000px;
+  transition: all 0.6s;
+  -moz-transition: all 0.6s;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: all 0.6s;
+  -moz-transition: all 0.6s;
+  
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* #flip-check:checked ~ .flip-card .flip-card-inner {
+  transform: translate(calc(50vw - 50%), calc(50vh - 50%)) rotateY(180deg);
+}
+#flip-check:checked ~ .flip-card {
+  width: 500px;
+  z-index: 2;
+} */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  border-radius: 30px;
+
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #E0E0E0;
+}
+
+.flip-card-back {
+  background-color: #fff;
+  transform: rotateY(180deg);
+}
+
+
+.accordion {
+  display: inline-block;
+  text-align: left;
+  margin: 1%;
+  width: 70%;
+}
+.accordion:hover .accordion-content {
+  max-height: 300px;
+}
+.accordion-content {
+  -webkit-transition: max-height 1s;
+  -moz-transition: max-height 1s;
+  -ms-transition: max-height 1s;
+  -o-transition: max-height 1s;
+  transition: max-height 1s;
+  background: #e5feff;
+  overflow: hidden;
+  max-height: 0;
+  padding: 0 15px;
+
+}
+
+.accordion-toggle {
+  -webkit-transition: background .1s linear;
+  -moz-transition: background .1s linear;
+  -ms-transition: background .1s linear;
+  -o-transition: background .1s linear;
+  transition: background .1s linear;
+  background: #00b8c9;
+  border-radius: 3px;
+  color: #fff;
+  display: block;
+  font-size: 30px;
+  margin: 0 0 10px;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+}
+.accordion-toggle:hover {
+  background: #00727d;
+}
