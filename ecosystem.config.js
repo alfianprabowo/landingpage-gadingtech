@@ -5,7 +5,7 @@ module.exports = {
 
         {
 
-            name: "landing.gadingtech.id", // ubah sesuai nama aplikasi yang dibuat
+            name: "gadingtech.id", // ubah sesuai nama aplikasi yang dibuat
 
             script: "npx",
 
