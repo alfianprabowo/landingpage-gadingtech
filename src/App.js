@@ -8,6 +8,7 @@ function App() {
     setTimeout(() => {
       setShowOpening(false)
     }, 4000)
+    document.title = "Gading Tech"
   }, [showOpening])
   return <div className='relative overflow-x-hidden h-screen w-screen bg-[#2C2C2C] '>{showOpening ? <Opening /> : <Home />}</div>
 }

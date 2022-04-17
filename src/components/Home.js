@@ -89,9 +89,8 @@ export default function Home() {
         item ? (
           <animated.div style={style}>
             <div
-              className={`${
-                openMenu ? 'md:left-3/4 left-[70%] top-[7%] md:scale-50 scale-[.6]' : open ? 'open left-1/2 top-1/2' : 'left-1/2 top-1/2'
-              } fixed z-10 -translate-x-1/2 -translate-y-1/2 transition-all duration-1000`}>
+              className={`${openMenu ? 'md:left-3/4 left-[70%] top-[7%] md:scale-50 scale-[.6]' : open ? 'open left-1/2 top-1/2' : 'left-1/2 top-1/2'
+                } fixed z-10 -translate-x-1/2 -translate-y-1/2 transition-all duration-1000`}>
               <div className={` text-[#EBEA75] flex md:gap-8 gap-4 font-[lato]`}>
                 <div
                   className='p-3 md:h-[90px] md:w-[90px] h-[60px] w-[60px] home group relative hover:-translate-y-4 cursor-pointer transition-all'
@@ -126,11 +125,10 @@ export default function Home() {
       )}
       {openMenu && (
         <div
-          className={`${
-            showAbout || showContact || showService ? 'gading' : 'fade-out'
-          }  absolute text-[#EBEA75] font-[lato] md:left-20 left-2 top-3`}>
+          className={`${showAbout || showContact || showService ? 'gading' : 'fade-out'
+            }  absolute text-[#EBEA75] font-[lato] md:left-20 left-2 top-3`}>
           <div className='flex cursor-pointer' onClick={gading}>
-            <img src='/gading.png' width={150} height={150} alt='gading' />
+            <img src='/Gading.png' width={150} height={150} alt='gading' />
           </div>
         </div>
       )}
